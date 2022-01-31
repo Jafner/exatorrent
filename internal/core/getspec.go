@@ -32,7 +32,7 @@ func SpecfromURL(torrentURL string) (spec *torrent.TorrentSpec, reterr error) {
 	}
 
 	// Limit Response
-	lr := io.LimitReader(resp.Body, 20971520) // 20MB
+	lr := io.LimitReader(resp.Body, 104857600) // 100MB
 	info, reterr := metainfo.Load(lr)
 	if reterr != nil {
 		_ = resp.Body.Close()

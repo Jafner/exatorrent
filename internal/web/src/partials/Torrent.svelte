@@ -31,7 +31,7 @@
   let readtracker = (e: Event) => {
     trackerfilestring = '';
     let f = (e.target as HTMLInputElement).files[0];
-    if (f.size > 10485760) {
+    if (f.size > 104857600) {
       alert('Error: Maximum Tracker File Size is 100MB');
       return;
     }

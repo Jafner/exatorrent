@@ -55,8 +55,8 @@
 
   function readtrnt(e: Event) {
     let f = (e.target as HTMLInputElement).files[0];
-    if (f.size > 20971520) {
-      alert('Error: Maximum Torrent File Size is 20MB');
+    if (f.size > 104857600) {
+      alert('Error: Maximum Torrent File Size is 100MB');
       return;
     }
     let reader = new FileReader();
