@@ -35,7 +35,7 @@ const (
 	pingPeriod = (pongWait * 9) / 10
 
 	// Maximum message size allowed from peer.
-	maxMessageSize = 31457280 // 30 MB
+	maxMessageSize = 104857600 // 100 MB
 )
 
 func SocketAPI(w http.ResponseWriter, r *http.Request) {
